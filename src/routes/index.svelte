@@ -1,5 +1,35 @@
 <script context="module">
-import { hotels } from "../stores/hotels";
+ 
+ import { api } from '../api/maldives';
+
+ export const get = async ({ locals }) => {
+	// locals.userid comes from src/hooks.js
+	const response = await api('get');
+
+	if (response.status === 404) {
+		// user hasn't created a todo list.
+		// start with an empty array`
+		return {
+			body: {
+				hotels: []
+			}
+		};
+	}
+
+	if (response.status === 200) {
+		return {
+			body: {
+				hotels: await response.json()
+			}
+		};
+	}
+
+	return {
+		status: response.status
+	};
+
+    
+};
  
 </script>
 

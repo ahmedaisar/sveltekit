@@ -9,10 +9,10 @@
 	guarantees are made. Don't use it to organise your life.)
 */
 
-const base = 'https://api.svelte.dev';
+const base = 'https://www.simplymaldivesholidays.co.uk/wp-admin/admin-ajax.php?action=resorts_list_all';
 
-export function api(method, resource, data) {
-	return fetch(`${base}/${resource}`, {
+export function api(method, data) {
+	return fetch(`${base}`, {
 		method,
 		headers: {
 			'content-type': 'application/json'
