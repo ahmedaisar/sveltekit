@@ -1,8 +1,5 @@
 <script context="module">
- 
-
-
- 
+import { hotels } from "../stores/hotels";
  
 </script>
 
@@ -33,13 +30,13 @@
                 <!-- .site-banner__search -->
                 <!-- lets edit -->
                 <p class="site-banner__meta">
-                    <!-- <span>Popular:</span>
+                    <span>Popular:</span>
                     {#await $hotels}
                     <div class="golo-loading-effect">
                         <span class="golo-dual-ring" />
                     </div>
                     {:then hotel}                  
-                    {#each hotel.slice(pop, 5) as hotel}
+                    {#each hotel.slice(100, 107) as hotel}
                             <a href="/hotels{hotel.localUrl}" title="{hotel.name}">{hotel.name}</a>
                      
                     {:else}
@@ -47,7 +44,7 @@
                     {/each}
                      {:catch error}
                     <p style="color: red">{error.message}</p>
-                    {/await} -->
+                    {/await}
                 </p>
                 <!-- .site-banner__meta -->
             </div>
@@ -59,7 +56,7 @@
         <div class="container">
             <h2 class="cities__title title">Popular hotels</h2>
             <div class="cities__content">
-                <!-- {#await $hotels}
+                {#await $hotels}
                     <div class="golo-loading-effect">
                         <span class="golo-dual-ring" />
                     </div>
@@ -103,7 +100,7 @@
                     </div>
                 {:catch error}
                     <p style="color: red">{error.message}</p>
-                {/await} -->
+                {/await}
             </div>
             <!-- .cities__content -->
         </div>
