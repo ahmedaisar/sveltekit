@@ -1,15 +1,15 @@
-// import { api } from '../api/maldives';
+// import { api } from './_api';
 
 // export const get = async ({ locals }) => {
 // 	// locals.userid comes from src/hooks.js
-// 	const response = await api('get');
+// 	const response = await api('get', `todos/${locals.userid}`);
 
 // 	if (response.status === 404) {
 // 		// user hasn't created a todo list.
-// 		// start with an empty array`
+// 		// start with an empty array
 // 		return {
 // 			body: {
-// 				hotels: []
+// 				todos: []
 // 			}
 // 		};
 // 	}
@@ -17,7 +17,7 @@
 // 	if (response.status === 200) {
 // 		return {
 // 			body: {
-// 				hotels: await response.json()
+// 				todos: await response.json()
 // 			}
 // 		};
 // 	}

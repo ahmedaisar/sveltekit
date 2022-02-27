@@ -1,6 +1,6 @@
-<script lang="ts">
+<script>
 
-import { page } from '$app/stores';
+import { getStores, navigating, page, session, updated } from '$app/stores';
 import { onMount } from 'svelte';
  
 
@@ -21,9 +21,6 @@ return hotels;
 }
 
 const promise = getHotel();
-
-
-
 
 
 
