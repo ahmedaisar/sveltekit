@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
 
-import { api } from './_api';
+ 
 
 export const hotels = writable([]);
 

@@ -1,6 +1,6 @@
 <script context="module">
  
- import { api } from '../api/maldives';
+ import { api } from './api/maldives';
 
  export const get = async ({ locals }) => {
 	// locals.userid comes from src/hooks.js
